@@ -1,5 +1,30 @@
 # Tetris for Terminals - "tt" - Written by Mike Taylor
 
+<BLOCKQUOTE><DIV style="color:green; background-color:black"><B><PRE>
+||                    ||  TETRIS FOR TERMINALS
+||                    ||
+||                    ||  Written by Mike Taylor
+||          %%%%      ||  Email: maujf@uk.ac.warwick.cu
+||        %%%%        ||  Started: Fri May 26 12:26:05 BST 1989
+||      ######        ||
+||        ##          ||  Game level: 12  Game mode: 0
+||        %%%%        ||
+||      %%%%        ()||  Score:  41
+||{}&lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;    ()()()||  Pieces: 13
+||{}{}{}              ||  Levels: 0
+||    ##              ||
+||    ####            ||    Use keys:
+||    ##          %%  ||    =========
+||    %%%%    ##  %%%%||    Move left:  ','
+||  %%%%    ######  %%||    Move right: '/'
+||    &lt;&gt;  &lt;&gt;&lt;&gt;&lt;&gt;&lt;&gt;%%%%||    Rotate:     '.'
+||    &lt;&gt;        %%%%  ||    Drop:       ' '
+||    &lt;&gt;          [][]||    Pause:      's'
+||    &lt;&gt;          [][]||    Quit:       'q'
+++====================++    Refresh:    '^L'
+
+</PRE></B></DIV></BLOCKQUOTE>
+
 ## 1. Specification
 
 This is a game written in C for Berkeley and System V UNIX machines. It was written on a Sun4 and has been extensively played and tested on both this machine and a Sun3, both running SunOS 4.0.1, a Berkeley 4.3bsd-derived UNIX, but it should port with minimum difficulties to any Berkeley UNIX. It has also been ported to SCO Unix System V/386 3.2.2, and should therefore be portable to other System V UNIX systems. One potential difficulty to look out for is incompatibility of the high-score file between different architectures, (eg. sun3 and sun4). I've done all I can to make it work, but there are no guarantees, and you might be better compiling multiple- architecture "tt"s with different high-score tables.
