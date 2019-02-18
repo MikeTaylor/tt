@@ -43,8 +43,8 @@ static int get_key ();
 
 /*-------------------------------------------------------------------------*/
 
-char *LOCK_FILE = "/home/mike/lib/ttlock/ttlock";
-char *SCORE_FILE = "/home/mike/lib/ttscores";
+char *LOCK_FILE = "/usr/local/lib/ttlock";
+char *SCORE_FILE = "/usr/local/lib/ttscores";
 
 /* These four variables determine which game we're playing */
 struct piece *pieces = pieces4;
