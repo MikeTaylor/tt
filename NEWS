@@ -1,5 +1,9 @@
 $Id: NEWS,v 1.4 2009-06-18 15:22:33 mike Exp $
 
+Release 16.0 (IN PROGRESS)
+     --	Better default paths for LOCK_FILE and SCORE_FILE.
+     -- Rework top-level README into Markdown.
+
 Release 15.1 (Thu Jun 18 16:23:14 BST 2009)
      --	Replace C++-style //-comments with C-style /*-comments.
      -- Replace false with 0.
