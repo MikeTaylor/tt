@@ -1,0 +1,26 @@
+Unsolicited testimonial from cadp53@ccsun.strath.ac.uk (14th June 1991)
+
+	"It's a fiend to play well!  So fast!  It's now twice as
+	 popular as the other tetris's I installed!  Take a bow!"
+
+T3 concept by Harvey "Max" Thompson (harveyt@sco.com)
+Pentris pieces by Kenton Oatley (maunf@uk.ac.warwick.cu)
+TNT pieces by Pete 'Gandalf' Favelle (csuat@uk.ac.warwick.cu)
+
+Things to do:
+(*)  Fix email addresses to say mirk@ssl.co.uk throughout
+(*)  Fix four games to use four separate high-score files
+(*)  Clarify by using a single struct representing game-type
+(*)  Consider re-introducing flush_keyboard() calls
+(*)  Add left-to-right dropping startup flag (or key?)
+(*)  Fix argument-parsing to use getopt()
+(*)  Fix to determine game-type from argv[0]
+(*)  Bring documentation up to date
+(*)  Send it all off to GNU and LINUX.
+
+And Harv says:
+	You could update README to mention who actually wrote it.  You
+	also have to edit tt.c to change the SCORE stuff.  Perhaps it
+	should be a Makefile flag (so you only have to edit one file).
+	An explanation of the LOCKF define and LOCK_FILE would also
+	be helpful here.

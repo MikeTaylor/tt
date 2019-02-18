@@ -1,0 +1,126 @@
+.TH TT 6 "5 June 1989" "Public Domain"
+.SH NAME
+tt \- a hoopy real-time puzzle game.
+.SH SYNOPSIS
+.B tt
+[
+.B \-s
+[
+.I num
+]
+] [
+.B \-b
+] [
+.B \-g
+] [
+.B \-N
+] [
+.B \-3|4|5|7
+] [
+.B \-l
+.I level
+] [
+.B \-m
+.I num
+]
+.SH DESCRIPTION
+.B tt
+is an implementation of the well-known game
+.B tetris.
+Quadominoes (groups of four squares joined orthogonally together) fall
+slowly down the screen, accumulating at the bottom, and when the pile
+reaches the top of the screen the game is over.  The pieces may be
+moved to the left or right, and rotated as they fall, with the aim of
+making them tessellate with the pieces already at the bottom of the
+game area.  The height of the stack of pieces can be reduced by
+filling a complete row of ten squares, at which point that row will
+disappear, and those above will fall down into its place.  It is
+possible (and desirable) to destroy multiple rows at once.
+.LP
+The keys with which these operations can be accomplished are displayed
+on the screen during play.  The game also recognises suspend, redraw
+and quit keys.
+.LP
+In between games, when the program is waiting for a keypress before
+restarting, pressing the "n" or "q" key will end the session, and
+pressing the "s" key will list the top ten entries of the high-score
+table.
+.LP
+The high-score table stores only a single score for each user at any
+game-level.  Thus a user exceeding his own level-zero high-score would
+have his old entry in the high-score table (if any) replaced with the
+new score.  However, a single user may have multiple high-score table
+entries for different game-levels.
+.SH OPTIONS
+.TP
+.BR \-s " [ \fInum\fP ]"
+.\" Yeeuuuch!
+Causes
+.B tt
+to print the top
+.I num
+entries in the high-score table.  Currently, a maximum of one hundred
+high-scores are maintained.  If
+.I num
+is not specified, the top ten scores are listed.
+.TP
+.B \-b
+Causes pieces to rotate backwards (ie. clockwise).
+.TP
+.BI \-g
+Causes "ghost" pieces to be displayed.  These curious apparitions show where the piece would be if you dropped it right this instant.
+.TP
+.BI \-N
+You will see the box telling you what the Next piece will be.
+.TP
+.BI \-3|4|5|7
+These are different types of games.  4 is the default, vanilla tetris.  3
+contains pieces that have only 3 squares.  5 has 5-square pieces.  7 has both
+pieces from 3 and 4.
+.TP
+.BI \-l " level"
+Causes
+.B tt
+to play on level
+.IR level ,
+which must be between \-10 and 20.  Each level of play starts at the
+same speed, and increases in speed at the same rate.  They are
+differentiated only by the fact that non-zero levels drop a number of
+pieces, equal to the absolute value of the level onto the screen
+before the game starts.  Negative levels drop pieces down the middle
+of the screen, positive levels place them randomly.  The author
+recommends that the optimal game-levels are 0, 10 and \-6.  The
+default level is 0.
+.TP
+.BI \-m " num"
+If non-zero, don't use all pieces.
+.SH ENVIRONMENT
+If the environment variable
+.B TTKEYS
+is set, it contains the keys which will be used for the operations,
+respectively, move left, move right, rotate piece, drop piece, suspend
+game, and quit game.  The keys ^L (redraw screen) and s (print the
+high-score table, when pressed between games) cannot be rebound.
+.LP
+If the environment variable
+.B TTNAME
+is set, it contains the name which will be used in the high-score
+table if a good enough score is obtained to merit inclusion.  If this
+variable is not set,
+.B tt
+will use the environment variable
+.B NAME
+and if this is also not set, the account-name will be used.
+.SH FILES
+/ssl/mirk/lib/ttscores \- high-score table.
+.br
+/ssl/mirk/lib/junk/ttlock \- lock file for high-score table.
+.SH AUTHOR
+The program
+.B tt
+was written by Mike Taylor (mirk@uk.co.ssl), based on the
+original
+.B tetris
+idea, by a frustratingly anonymous "Russian Researcher".
+.SH BUGS
+None known \- Please report any bugs to the author.

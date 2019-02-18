@@ -1,0 +1,108 @@
+From mirk Wed Aug 12 17:11:11 +0100 1998
+To: tmeisterburg@pader-online.de
+Subject: tt-meister
+
+Hiya Thomas,
+
+I've fetched your hacked version of my Tetris -- thanks for making it
+more widely available.  Just two things: (1) what do I have to do to
+enable the colour support?  It comes up in balck-and-white when I run
+it in an xterm; and (2) could you please put my email address,
+<mirk@ssl.co.uk>, back on the main screen, after my name?
+
+Thanks,
+
+ _/|_	  ____________________________________________________________________
+/o ) \/(  Mike Taylor -- {Christ,M{athemat,us}ic}ian	 Email: mirk@ssl.co.uk
+)_v__/\(  Zenophobia, n. -- the irrational fear of convergent sequences.
+
+
+From thomas@owl.de  Sat Aug 15 08:37:29 1998
+Return-Path: <thomas@owl.de>
+Date: Fri, 14 Aug 1998 22:05:05 +0200
+From: Thomas Meisterburg <tm@devnull.owl.de>
+To: Mike Taylor <mirk@ssl.co.uk>
+Subject: Re: tt-meister
+References: <9808121611.AA13944@kevin>
+Mime-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+X-Mailer: Mutt 0.91.1i
+In-Reply-To: <9808121611.AA13944@kevin>; from Mike Taylor on Wed, Aug 12, 1998 at 05:11:13PM +0100
+Organization: TechCrew
+
+On Wed, Aug 12, 1998 at 05:11:13PM +0100, Mike Taylor wrote:
+
+> Hiya Thomas,
+hi.
+
+> I've fetched your hacked version of my Tetris -- thanks for making it
+> more widely available.  Just two things: (1) what do I have to do to
+> enable the colour support?  It comes up in balck-and-white when I run
+> it in an xterm;
+the environment variable "TERM" must be set to "linux". i'm searching for
+a solution of this problem. at the moment the best way is to run it on
+a standard text-console. the next version will - at least - include this
+information.
+
+> and (2) could you please put my email address,
+> <mirk@ssl.co.uk>, back on the main screen, after my name?
+no problem. i also have to make some other changes (for example, my email-
+address and the address of the "official" website have changed)... i only
+need some time.
+i'll send you an email, when the new version and it's new website are
+available.
+
+uhmmm... sorry. my english is very bad. :-[
+mfg
+
+-- 
+eMail: tm@devnull.owl.de                     PGP: send eMail
+WWW  : http://devnull.owl.de/~tm/            with subject 
+IRC  : Meista (#Linux.de@IRCnet)             "send pgpkey"
+
+
+From mirk  Mon Aug 17 10:10:39 1998
+Return-Path: <mirk>
+From: Mike Taylor <mirk>
+Date: Mon, 17 Aug 1998 10:10:41 +0100
+To: tm@devnull.owl.de
+Cc: mirk
+In-Reply-To: <19980814220505.G1392@preathene.meista.de> (message from Thomas Meisterburg on Fri, 14 Aug 1998 22:05:05 +0200)
+Subject: Re: tt-meister
+
+> Date: Fri, 14 Aug 1998 22:05:05 +0200
+> From: Thomas Meisterburg <tm@devnull.owl.de>
+>
+> > I've fetched your hacked version of my Tetris -- thanks for making it
+> > more widely available.  Just two things: (1) what do I have to do to
+> > enable the colour support?  It comes up in balck-and-white when I run
+> > it in an xterm;
+>
+> the environment variable "TERM" must be set to "linux". i'm
+> searching for a solution of this problem. at the moment the best way
+> is to run it on a standard text-console. the next version will - at
+> least - include this information.
+
+OK, thanks.
+
+> > and (2) could you please put my email address, <mirk@ssl.co.uk>,
+> > back on the main screen, after my name?
+>
+> no problem. i also have to make some other changes (for example, my email-
+> address and the address of the "official" website have changed)... i only
+> need some time.
+> i'll send you an email, when the new version and it's new website are
+> available.
+
+Great stuff.
+
+> uhmmm... sorry. my english is very bad. :-[
+
+Not so -- it's fine.
+
+ _/|_	  ____________________________________________________________________
+/o ) \/(  Mike Taylor -- {Christ,M{athemat,us}ic}ian	 Email: mirk@ssl.co.uk
+)_v__/\(  Am2 G6/A Fmaj7/A D2/A, Am2 Eno3 Am2 x 2; Bb Am2 Em Am2, Bb Am2 Em E
+	  -- "Love is Blindness", U2.
+
+

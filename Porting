@@ -1,0 +1,89 @@
+From uknet!bjesomar.srce.hr!alex  Thu Jan 19 11:25:27 1995
+Return-Path: <uknet!bjesomar.srce.hr!alex>
+From: alex@bjesomar.srce.hr (Aleksandar Milivojevic)
+Subject: Re: Tetris
+To: mirk@ssl.co.uk (Mike Taylor)
+Date: Thu, 19 Jan 1995 12:23:10 +0100 (NFT)
+In-Reply-To: <9501171639.AA13041@ssl.co.uk> from "Mike Taylor" at Jan 17, 95 04:39:52 pm
+X-Mailer: ELM [version 2.4 PL23]
+Mime-Version: 1.0
+Content-Type: text/plain; charset=ISO-8859-2
+Content-Transfer-Encoding: 8bit
+Content-Length: 1795
+
+Ok, I compiled it on both AIX and Ultrix... Here are changes which I needed
+in order to compile it:
+
+On AIX:
+In Makefile:
+   Changed CFLAGS to: CFLAGS = $(OPT) -DAIX
+   Changed LDLIBS to: LDLIBS = -lcurses
+In tt.c:
+   Changed:
+     #ifdef SYSV
+     extern int sprintf ();
+     #else /*SYSV*/
+     extern char *sprintf ();
+     #endif /*SYSV*/
+   To:
+     #ifndef AIX
+     #ifdef SYSV
+     extern int sprintf ();
+     #else /*SYSV*/
+     extern char *sprintf ();
+     #endif /*SYSV*/
+     #endif /* AIX */
+
+On Ultrix:
+There is no usleep function, so I needed to add one.
+In Makefile:
+   Changed SRC to: SRC = tt.c utils.c screen.c pieces.c game.c usleep.c
+
+I grabbed usleep.c from xpilot source ;-)
+So here it is:
+
+usleep.c:
+------------------------ 8< Cut here 8< ----------------------
+/*
+#ifndef lint
+static char sccsid[] = "@(#)usleep.c	1.3 91/05/24 XLOCK";
+#endif
+*/
+/*-
+ * usleep.c - OS dependant implementation of usleep().
+ *
+ * Copyright (c) 1991 by Patrick J. Naughton.
+ *
+ * Revision History:
+ * 30-Aug-90: written.
+ *
+ */
+
+#include <sys/types.h>
+#include <sys/time.h>
+
+
+#ifndef	lint
+static char sourceid[] =
+    "@(#)$Id: Porting,v 1.1.1.1 2003-05-27 10:46:19 mike Exp $";
+#endif
+
+
+void usleep(unsigned long usec)
+{
+#if 0 /* SYSV */
+    poll((struct poll *) 0, (size_t) 0, usec / 1000);	/* ms RES */
+#endif
+    struct timeval timeout;
+    timeout.tv_usec = usec % (unsigned long) 1000000;
+    timeout.tv_sec = usec / (unsigned long) 1000000;
+    (void) select(0, (void *) 0, (void *) 0, (void *) 0, &timeout);
+}
+------------------------ 8< Cut here 8< ----------------------
+
+-- 
+CAHN'S AXIOM:          | Aleksandar Milivojevic | mail: Jakova Gotovca 5
+When all else fails,   | ---------------------- |       54520 Slatina
+read the instructions. | e-mail: alex@srce.hr   |       Croatia
+
+
