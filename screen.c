@@ -343,7 +343,8 @@ void draw_piece (piece_no, orient, y, x, flag)
     j = ghost_height(piece_no, orient, y, x);
 
   if (flag == PD_ERASE) {
-    draw_raw (piece_no, orient, j, x, erase_as );
+    if (GHOST_PIECES)
+      draw_raw (piece_no, orient, j, x, erase_as );
     draw_raw (piece_no, orient, y, x, erase_as );
   } /* if we're erasing */
   else {
