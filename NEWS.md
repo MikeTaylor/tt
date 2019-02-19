@@ -5,6 +5,7 @@
 * Better default paths for `LOCK_FILE` and `SCORE_FILE`.
 * Rework top-level `README` into Markdown.
 * Rework this `NEWS` file into Markdown.
+* Bug-fix: sometimes pieces were being erased in the location where a ghost-piece _would_ fall if `-g` was on. Thanks to Madhu <enometh@meer.net>.
 
 ## Release 15.1 (Thu Jun 18 16:23:14 BST 2009)
 
